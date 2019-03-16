@@ -44,7 +44,7 @@ func GenerateNew(privatePath, publicPath string, bitsize int) error {
 
 	log.Println("key generated")
 
-	if writePublic != nil{
+	if writePublic == nil{
 		publicBytes, err := publicPEMBytes(&privateKey.PublicKey)
 		if err != nil{
 			return err
@@ -56,7 +56,7 @@ func GenerateNew(privatePath, publicPath string, bitsize int) error {
 		}
 	}
 
-	if writePrivate != nil{
+	if writePrivate == nil{
 		privateBytes := privatePEMBytes(privateKey)
 		err = write(privatePath, privateBytes)
 		if err != nil{
