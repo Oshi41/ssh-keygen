@@ -19,7 +19,7 @@ var (
 )
 // Генерит ключи с дефолтным размером блока бит
 func GenerateNew4096(privatePath, publicPath string) error {
-	return GenerateNew(privatePath, privatePath, 4096)
+	return GenerateNew(privatePath, publicPath, 4096)
 }
 
 // Создает новую пару ssh ключей, записывает их в указанные пути
