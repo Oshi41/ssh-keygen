@@ -3,7 +3,7 @@
 
 Использование:
 
-go get "github.com/Oshi41/ssh-keygen"
+go get github.com/Oshi41/ssh-keygen
 
 Функция ssh_keygen.GenerateNew(privatePath, publicPath, bitSize)
 
